@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "es6" /* Or a more recent target if desired */,
+    "module": "commonjs",
+    "outDir": "./dist" /* Output directory for transpiled JS */,
+    "rootDir": "./src" /* TypeScript source files */,
+    "esModuleInterop": true,
+    "strict": true /* Recommended for type safety */
+  }
+}
