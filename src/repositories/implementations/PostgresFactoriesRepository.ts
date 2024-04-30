@@ -20,4 +20,26 @@ export class PostgresFactoriesRepository implements IFactoriesRepository {
       descripcion: createdFactory.descripcion,
     };
   }
+
+  async getAllWithProducts(): Promise<Factory[]> {
+    const factories = await this.prisma.factory.findMany({
+      include: { Product: true },
+    });
+
+    return factories.map((factory) => {
+      return {
+        id: +factory.id.toString(),
+        descripcion: factory.descripcion,
+        products: factory.Product.map((product) => {
+          return {
+            id: +product.id.toString(),
+            descripcion: product.descripcion,
+            precio: product.precio,
+            existencias: +product.existencias.toString(),
+            idFab: +factory.id.toString(),
+          };
+        }),
+      };
+    });
+  }
 }
