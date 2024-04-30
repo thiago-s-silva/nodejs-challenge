@@ -1,4 +1,4 @@
-import { IFactoriesRepository } from "../../repositories/IFactoriesRepository";
+import { IFactoriesRepository } from "../../../repositories/IFactoriesRepository";
 
 export class GetAllFactoriesUseCase {
   constructor(private factoriesRepository: IFactoriesRepository) {}

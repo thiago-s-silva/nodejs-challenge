@@ -1,4 +1,4 @@
-import { IProductsRepository } from "../../repositories/IProductsRepository";
+import { IProductsRepository } from "../../../repositories/IProductsRepository";
 
 export class DeleteProductUseCase {
   constructor(private readonly productRepository: IProductsRepository) {}

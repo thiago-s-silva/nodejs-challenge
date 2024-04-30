@@ -1,9 +1,15 @@
 import { Router } from "express";
-import { createProductController } from "./useCases/CreateProduct";
-import { getAllFactoriesController } from "./useCases/GetAllFactories";
-import { deleteProductController } from "./useCases/DeleteProduct";
+import { createProductController } from "./useCases/Product/CreateProduct";
+import { getAllFactoriesController } from "./useCases/Factory/GetAllFactories";
+import { deleteProductController } from "./useCases/Product/DeleteProduct";
+import { createUserController } from "./useCases/User";
 
 const router = Router();
+
+/*** USERS ****/
+router.post("/api/v1/users", (req, res) => {
+  return createUserController.handle(req, res);
+});
 
 /*** PRODUCTS ****/
 // Create a new product and factory

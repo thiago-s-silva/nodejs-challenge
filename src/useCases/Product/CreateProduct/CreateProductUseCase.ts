@@ -1,5 +1,5 @@
-import { IFactoriesRepository } from "../../repositories/IFactoriesRepository";
-import { IProductsRepository } from "../../repositories/IProductsRepository";
+import { IFactoriesRepository } from "../../../repositories/IFactoriesRepository";
+import { IProductsRepository } from "../../../repositories/IProductsRepository";
 import {
   ICreateProductRequestDTO,
   ICreateProductResponseDTO,

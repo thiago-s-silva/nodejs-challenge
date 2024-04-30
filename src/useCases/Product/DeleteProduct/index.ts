@@ -1,5 +1,5 @@
-import { PrismaSingleton } from "../../databases/prisma";
-import { PostgresProductsRepository } from "../../repositories/implementations/PostgresProductsRepository";
+import { PrismaSingleton } from "../../../databases/prisma";
+import { PostgresProductsRepository } from "../../../repositories/implementations/PostgresProductsRepository";
 import { DeleteProductController } from "./DeleteProductController";
 import { DeleteProductUseCase } from "./DeleteProductUseCase";
 

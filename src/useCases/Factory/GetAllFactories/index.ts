@@ -1,5 +1,5 @@
-import { PrismaSingleton } from "../../databases/prisma";
-import { PostgresFactoriesRepository } from "../../repositories/implementations/PostgresFactoriesRepository";
+import { PrismaSingleton } from "../../../databases/prisma";
+import { PostgresFactoriesRepository } from "../../../repositories/implementations/PostgresFactoriesRepository";
 import GetAllFactoriesController from "./GetAllFactoriesController";
 import { GetAllFactoriesUseCase } from "./GetAllFactoriesUseCase";
 
