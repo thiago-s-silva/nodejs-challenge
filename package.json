@@ -9,7 +9,8 @@
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "db:migrate": "npx prisma migrate dev --name init",
     "db:generate": "npx prisma generate",
-    "db:sync": "npm run db:migrate && npm run db:generate"
+    "db:sync": "npm run db:migrate && npm run db:generate",
+    "start:migrate": "npx prisma migrate dev --name init && npm run start"
   },
   "keywords": [],
   "author": "",
