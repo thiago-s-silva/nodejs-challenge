@@ -1,4 +1,5 @@
 import { IUsersRepository } from "../../../repositories/IUsersRepository";
+import { hashPassword } from "../../../utils";
 import { CreateUserRequestDTO, CreateUserResponseDTO } from "./CreateUserDTO";
 import crypto from "crypto";
 
@@ -15,10 +16,7 @@ export class CreateUserUseCase {
       throw new Error("User already exists");
     }
 
-    const hashedPassowrd = crypto
-      .createHash("sha256")
-      .update(password)
-      .digest("hex");
+    const hashedPassowrd = hashPassword(password);
 
     await this.UsersRepository.create({
       email,
