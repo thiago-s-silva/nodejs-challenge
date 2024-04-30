@@ -12,5 +12,5 @@ export interface ICreateProductRequestDTO {
 
 export interface ICreateProductResponseDTO {
   status: boolean;
-  product: Product;
+  payload: Product;
 }

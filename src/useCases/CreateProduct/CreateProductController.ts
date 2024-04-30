@@ -24,6 +24,8 @@ export class CreateProductController {
 
       return Response.status(201).json(product);
     } catch (error: any) {
+      console.error(`[CreateProduct] Unexpected error: ${error}`);
+
       return Response.status(400).json({
         message: error.message || "Unexpected error.",
       });

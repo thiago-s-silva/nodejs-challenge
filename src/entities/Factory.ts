@@ -1,8 +1,8 @@
 export class Factory {
-  public readonly id?: number | null;
-  public readonly name: string;
+  public readonly id?: number;
+  public readonly descripcion: string;
 
-  constructor(name: string, id?: number | null) {
-    this.name = name;
+  constructor(description: string) {
+    this.descripcion = description;
   }
 }
