@@ -25,4 +25,22 @@ export class PostgresProductsRepository implements IProductsRepository {
       idFab: +createdProduct.idFab.toString(),
     };
   }
+
+  async findById(id: number): Promise<Product | null> {
+    const product = await this.prisma.product.findFirst({ where: { id } });
+
+    if (!product) return null;
+
+    return {
+      id: +product.id.toString(),
+      descripcion: product.descripcion,
+      existencias: +product.existencias.toString(),
+      precio: +product.precio.toString(),
+      idFab: +product.idFab.toString(),
+    };
+  }
+
+  async deleteById(id: number): Promise<void> {
+    await this.prisma.product.delete({ where: { id } });
+  }
 }
